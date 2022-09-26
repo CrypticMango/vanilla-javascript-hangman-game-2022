@@ -12,6 +12,10 @@ img {
     width: 150px;
 }
 
+p {
+    font-size: 30px;
+}
+
 #alphabet-buttons {
     padding: 0px 30px 0px 30px;
 }
