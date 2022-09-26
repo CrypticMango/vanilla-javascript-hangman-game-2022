@@ -1,3 +1,17 @@
 body {
     background-color: lightcoral;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+img {
+    width: 150px;
+}
+
+#alphabet-buttons {
+    padding: 0px 30px 0px 30px;
 }
