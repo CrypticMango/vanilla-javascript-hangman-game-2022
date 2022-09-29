@@ -17,6 +17,7 @@ let hangmanPhrases = [
 	"basil",
 	"homemade pizza",
 	"laughter",
+    "sweet baby"
 ];
 
 //function to display random phrase
