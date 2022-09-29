@@ -5,6 +5,7 @@
 //if player uses up all lives display the answer in game over screen
 //add timer
 //add scoreboard
+//have a guess tracker
 
 let hangmanPhrases = [
 	"love",
