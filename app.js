@@ -1,4 +1,4 @@
-//when a letter is pressed, need to search for word in the selected word or phrase
+//when a letter is pressed, need to search for letter in the selected word or phrase
 //must be able to detect how many wrong guesses there are
 //must display different phases of hangman image
 //have a game over screen when lives are used up
