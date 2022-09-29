@@ -16,10 +16,6 @@ p {
     font-size: 30px;
 }
 
-#hangman-phrase {
-    display: none;
-}
-
 #alphabet-buttons {
     padding: 0px 30px 0px 30px;
 }
