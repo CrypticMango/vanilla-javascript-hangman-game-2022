@@ -16,7 +16,7 @@ let hangmanPhrases = [
 	"kittens",
 	"basil",
 	"homemade pizza",
-	"contagious laughter",
+	"laughter",
 ];
 
 //function to display random phrase
@@ -31,7 +31,9 @@ function randomPhrase(array) {
 }
 
 const result = randomPhrase(hangmanPhrases);
+const hiddenResult = result.replace(/[a-z]/g, "_ ")
 console.log(result);
+console.log(hiddenResult);
 
 const currentWord = document.getElementById("hangman-phrase");
 const newWordButton = document.getElementById("new-word");
@@ -41,7 +43,7 @@ console.log(currentWord);
 newWordButton.addEventListener("click", newWord);
 
 function insertPhrase() {
-	currentWord.innerHTML = result;
+	currentWord.innerHTML = hiddenResult;
 }
 
 function newWord() {
