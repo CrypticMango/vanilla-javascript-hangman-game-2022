@@ -1,17 +1,10 @@
 //when correct letter is pressed place letter in answer line
-//must be able to detect how many wrong guesses there are
 //must display different phases of hangman image
 //have a game over screen when lives are used up
 //if player uses up all lives display the answer in game over screen
 //add timer
 //add scoreboard
 //have a guess tracker
-
-let lives = 5;
-
-function guessTracker() {
-	
-}
 
 let hangmanPhrases = [
 	"love",
@@ -47,7 +40,7 @@ function randomPhrase(array) {
 	return item;
 }
 
-const result = randomPhrase(hangmanPhrases);
+let result = randomPhrase(hangmanPhrases);
 let hiddenResult = result.replace(/[a-z]/g, "-");
 console.log(result);
 console.log(hiddenResult);
@@ -106,14 +99,15 @@ function checkLetterA() {
 	if (result.includes("a")) {
 		alert("yes! the letter a is in this word");
 		document.getElementById('a').style.backgroundColor = '#00FF00';
-		hiddenResult = result.replace(/"-"/g, "a");
-		currentWord.innerHTML = hiddenResult;
-		
+		return true;
 	} else {
 		alert("letter a is not in word");
 		document.getElementById('a').style.backgroundColor = '#FF0000';
+		return false;
 	}
+	
 }
+
 
 let aButton = document.getElementById("a");
 aButton.addEventListener("click", checkLetterA);
@@ -468,5 +462,21 @@ function checkLetterZ() {
 let zButton = document.getElementById("z");
 zButton.addEventListener("click", checkLetterZ);
 
-//let testButton = document.getElementById("test-button");
-//testButton.addEventListener("click", checkLetterA);
+//5 lives functions
+
+let lives = 5;
+let livesDisplay = document.getElementById('five-lives');
+
+
+function checkLives() {
+	if (checkLetterA === false) {
+		lives--;
+	}
+}
+
+checkLives();
+
+//console.log(checkLetterA())
+
+livesDisplay.innerHTML = lives;
+
