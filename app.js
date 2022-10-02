@@ -1,4 +1,4 @@
-//when a letter is pressed, need to search for letter in the selected word or phrase
+//when correct letter is pressed place letter in answer line
 //must be able to detect how many wrong guesses there are
 //must display different phases of hangman image
 //have a game over screen when lives are used up
@@ -6,6 +6,12 @@
 //add timer
 //add scoreboard
 //have a guess tracker
+
+let lives = 5;
+
+function guessTracker() {
+	
+}
 
 let hangmanPhrases = [
 	"love",
@@ -18,7 +24,16 @@ let hangmanPhrases = [
 	"basil",
 	"homemade pizza",
 	"laughter",
-    "sweet baby"
+    "sweet baby",
+	"pringles",
+	"plant lover",
+	"ragdoll",
+	"vampire",
+	"xbox is best",
+	"canada",
+	"united kingdom",
+	"longboarding",
+	"millions"
 ];
 
 //function to display random phrase
@@ -33,7 +48,7 @@ function randomPhrase(array) {
 }
 
 const result = randomPhrase(hangmanPhrases);
-const hiddenResult = result.replace(/[a-z]/g, "_ ")
+let hiddenResult = result.replace(/[a-z]/g, "-");
 console.log(result);
 console.log(hiddenResult);
 
@@ -90,8 +105,13 @@ let letters = [
 function checkLetterA() {
 	if (result.includes("a")) {
 		alert("yes! the letter a is in this word");
+		document.getElementById('a').style.backgroundColor = '#00FF00';
+		hiddenResult = result.replace(/"-"/g, "a");
+		currentWord.innerHTML = hiddenResult;
+		
 	} else {
 		alert("letter a is not in word");
+		document.getElementById('a').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -102,8 +122,10 @@ aButton.addEventListener("click", checkLetterA);
 function checkLetterB() {
 	if (result.includes("b")) {
 		alert("yes! the b letter is in this word");
+		document.getElementById('b').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter b is not in word");
+		document.getElementById('b').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -114,8 +136,10 @@ bButton.addEventListener("click", checkLetterB);
 function checkLetterC() {
 	if (result.includes("c")) {
 		alert("yes! the c letter is in this word");
+		document.getElementById('c').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter c is not in word");
+		document.getElementById('c').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -126,8 +150,10 @@ cButton.addEventListener("click", checkLetterC);
 function checkLetterD() {
 	if (result.includes("d")) {
 		alert("yes! the d letter is in this word");
+		document.getElementById('d').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter d is not in word");
+		document.getElementById('d').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -138,8 +164,10 @@ dButton.addEventListener("click", checkLetterD);
 function checkLetterE() {
 	if (result.includes("e")) {
 		alert("yes! the e letter is in this word");
+		document.getElementById('e').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter e is not in word");
+		document.getElementById('e').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -150,8 +178,10 @@ eButton.addEventListener("click", checkLetterE);
 function checkLetterF() {
 	if (result.includes("f")) {
 		alert("yes! the f letter is in this word");
+		document.getElementById('f').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter f is not in word");
+		document.getElementById('f').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -162,8 +192,10 @@ fButton.addEventListener("click", checkLetterF);
 function checkLetterG() {
 	if (result.includes("g")) {
 		alert("yes! the g letter is in this word");
+		document.getElementById('g').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter g is not in word");
+		document.getElementById('g').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -174,8 +206,10 @@ gButton.addEventListener("click", checkLetterG);
 function checkLetterH() {
 	if (result.includes("h")) {
 		alert("yes! the h letter is in this word");
+		document.getElementById('h').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter h is not in word");
+		document.getElementById('h').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -186,8 +220,10 @@ hButton.addEventListener("click", checkLetterH);
 function checkLetterI() {
 	if (result.includes("i")) {
 		alert("yes! the i letter is in this word");
+		document.getElementById('i').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter i is not in word");
+		document.getElementById('i').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -198,8 +234,10 @@ iButton.addEventListener("click", checkLetterI);
 function checkLetterJ() {
 	if (result.includes("j")) {
 		alert("yes! the j letter is in this word");
+		document.getElementById('j').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter j is not in word");
+		document.getElementById('j').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -210,8 +248,10 @@ jButton.addEventListener("click", checkLetterJ);
 function checkLetterK() {
 	if (result.includes("k")) {
 		alert("yes! the k letter is in this word");
+		document.getElementById('k').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter k is not in word");
+		document.getElementById('k').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -222,8 +262,10 @@ kButton.addEventListener("click", checkLetterK);
 function checkLetterL() {
 	if (result.includes("l")) {
 		alert("yes! the l letter is in this word");
+		document.getElementById('l').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter l is not in word");
+		document.getElementById('l').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -234,8 +276,10 @@ lButton.addEventListener("click", checkLetterL);
 function checkLetterM() {
 	if (result.includes("m")) {
 		alert("yes! the m letter is in this word");
+		document.getElementById('m').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter m is not in word");
+		document.getElementById('m').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -246,8 +290,10 @@ mButton.addEventListener("click", checkLetterM);
 function checkLetterN() {
 	if (result.includes("n")) {
 		alert("yes! the n letter is in this word");
+		document.getElementById('n').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter n is not in word");
+		document.getElementById('n').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -258,8 +304,10 @@ nButton.addEventListener("click", checkLetterN);
 function checkLetterO() {
 	if (result.includes("o")) {
 		alert("yes! the o letter is in this word");
+		document.getElementById('o').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter o is not in word");
+		document.getElementById('o').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -270,8 +318,10 @@ oButton.addEventListener("click", checkLetterO);
 function checkLetterP() {
 	if (result.includes("p")) {
 		alert("yes! the p letter is in this word");
+		document.getElementById('p').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter p is not in word");
+		document.getElementById('p').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -282,8 +332,10 @@ pButton.addEventListener("click", checkLetterP);
 function checkLetterQ() {
 	if (result.includes("q")) {
 		alert("yes! the q letter is in this word");
+		document.getElementById('q').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter q is not in word");
+		document.getElementById('q').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -294,8 +346,10 @@ qButton.addEventListener("click", checkLetterQ);
 function checkLetterR() {
 	if (result.includes("r")) {
 		alert("yes! the r letter is in this word");
+		document.getElementById('r').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter r is not in word");
+		document.getElementById('r').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -306,8 +360,10 @@ rButton.addEventListener("click", checkLetterR);
 function checkLetterS() {
 	if (result.includes("s")) {
 		alert("yes! the s letter is in this word");
+		document.getElementById('s').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter s is not in word");
+		document.getElementById('s').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -318,8 +374,10 @@ sButton.addEventListener("click", checkLetterS);
 function checkLetterT() {
 	if (result.includes("t")) {
 		alert("yes! the t letter is in this word");
+		document.getElementById('t').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter t is not in word");
+		document.getElementById('t').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -330,8 +388,10 @@ tButton.addEventListener("click", checkLetterT);
 function checkLetterU() {
 	if (result.includes("u")) {
 		alert("yes! the u letter is in this word");
+		document.getElementById('u').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter u is not in word");
+		document.getElementById('u').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -342,8 +402,10 @@ uButton.addEventListener("click", checkLetterU);
 function checkLetterV() {
 	if (result.includes("v")) {
 		alert("yes! the v letter is in this word");
+		document.getElementById('v').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter v is not in word");
+		document.getElementById('v').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -354,8 +416,10 @@ vButton.addEventListener("click", checkLetterV);
 function checkLetterW() {
 	if (result.includes("w")) {
 		alert("yes! the w letter is in this word");
+		document.getElementById('w').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter w is not in word");
+		document.getElementById('w').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -366,8 +430,10 @@ wButton.addEventListener("click", checkLetterW);
 function checkLetterX() {
 	if (result.includes("x")) {
 		alert("yes! the x letter is in this word");
+		document.getElementById('x').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter x is not in word");
+		document.getElementById('x').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -378,8 +444,10 @@ xButton.addEventListener("click", checkLetterX);
 function checkLetterY() {
 	if (result.includes("y")) {
 		alert("yes! the y letter is in this word");
+		document.getElementById('y').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter y is not in word");
+		document.getElementById('y').style.backgroundColor = '#FF0000';
 	}
 }
 
@@ -390,8 +458,10 @@ yButton.addEventListener("click", checkLetterY);
 function checkLetterZ() {
 	if (result.includes("z")) {
 		alert("yes! the z letter is in this word");
+		document.getElementById('z').style.backgroundColor = '#00FF00';
 	} else {
 		alert("letter z is not in word");
+		document.getElementById('z').style.backgroundColor = '#FF0000';
 	}
 }
 
