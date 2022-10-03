@@ -92,10 +92,12 @@ let letters = [
 	"z",
 ];
 
+
 //functions to check to see if a letter is in a phrase
 
 //letter a
 function checkLetterA() {
+	
 	if (result.includes("a")) {
 		alert("yes! the letter a is in this word");
 		document.getElementById('a').style.backgroundColor = '#00FF00';
@@ -104,9 +106,11 @@ function checkLetterA() {
 		alert("letter a is not in word");
 		document.getElementById('a').style.backgroundColor = '#FF0000';
 		return false;
+		
 	}
-	
+
 }
+
 
 
 let aButton = document.getElementById("a");
@@ -120,6 +124,7 @@ function checkLetterB() {
 	} else {
 		alert("letter b is not in word");
 		document.getElementById('b').style.backgroundColor = '#FF0000';
+	
 	}
 }
 
@@ -465,18 +470,18 @@ zButton.addEventListener("click", checkLetterZ);
 //5 lives functions
 
 let lives = 5;
+let livesWord = "Lives: "
 let livesDisplay = document.getElementById('five-lives');
 
-
 function checkLives() {
-	if (checkLetterA === false) {
+	if (checkLetterA() === false)
 		lives--;
-	}
+		livesDisplay.innerHTML = livesWord + lives;
 }
 
+livesDisplay.innerHTML = livesWord + lives;
+
 checkLives();
+console.log(lives);
 
-//console.log(checkLetterA())
-
-livesDisplay.innerHTML = lives;
-
+//decrement?
