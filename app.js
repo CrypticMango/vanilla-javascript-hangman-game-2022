@@ -736,3 +736,13 @@ function checkLivesZ() {
 }
 
 livesDisplay.innerHTML = livesWord + lives;
+
+//gameover screen
+
+let gameOverButton = document.getElementById("game-over");
+gameOverButton.addEventListener("click", gameOverScreen);
+
+function gameOverScreen() {
+	location.href = "gameover.html";
+}
+
