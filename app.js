@@ -483,5 +483,3 @@ livesDisplay.innerHTML = livesWord + lives;
 
 checkLives();
 console.log(lives);
-
-//decrement?
