@@ -106,30 +106,29 @@ function checkLetterA() {
 		alert("letter a is not in word");
 		document.getElementById('a').style.backgroundColor = '#FF0000';
 		return false;
-		
 	}
-
 }
-
-
 
 let aButton = document.getElementById("a");
 aButton.addEventListener("click", checkLetterA);
+aButton.addEventListener("click", checkLives);
 
 //letter b
 function checkLetterB() {
 	if (result.includes("b")) {
 		alert("yes! the b letter is in this word");
 		document.getElementById('b').style.backgroundColor = '#00FF00';
+		return true;
 	} else {
 		alert("letter b is not in word");
 		document.getElementById('b').style.backgroundColor = '#FF0000';
-	
+		return false;
 	}
 }
 
 let bButton = document.getElementById("b");
 bButton.addEventListener("click", checkLetterB);
+bButton.addEventListener("click", checkLives);
 
 //letter c
 function checkLetterC() {
@@ -474,12 +473,15 @@ let livesWord = "Lives: "
 let livesDisplay = document.getElementById('five-lives');
 
 function checkLives() {
-	if (checkLetterA() === false)
+	if (checkLetterA() === false) {
 		lives--;
 		livesDisplay.innerHTML = livesWord + lives;
+	} if (checkLetterB() === false) {
+		lives--;
+		livesDisplay.innerHTML = livesWord + lives;
+	}else {
+		null;
+	}
 }
 
 livesDisplay.innerHTML = livesWord + lives;
-
-checkLives();
-console.log(lives);
