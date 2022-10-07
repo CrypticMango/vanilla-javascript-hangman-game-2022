@@ -2,15 +2,15 @@
 //must display different phases of hangman image
 //have a game over screen when lives are used up
 //if player uses up all lives display the answer in game over screen
-//add timer
+//add timer?
 //add scoreboard
-//have a guess tracker
 
 //5 lives variables
 
 let lives = 5;
 let livesWord = "Lives: "
 let livesDisplay = document.getElementById('five-lives');
+
 
 //hangman phrases array
 
@@ -746,3 +746,13 @@ function gameOverScreen() {
 	location.href = "gameover.html";
 }
 
+function gameOver() {
+	if (lives=== 0) {
+		alert("Game Over! You ran out of lives.");
+		location.reload();
+	}
+}
+
+gameOver();
+
+console.log(livesDisplay.innerHTML);
