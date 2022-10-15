@@ -747,12 +747,14 @@ function gameOverScreen() {
 }
 
 function gameOver() {
-	if (lives=== 0) {
+	if (lives === 0) {
 		alert("Game Over! You ran out of lives.");
 		location.reload();
 	}
 }
 
+
 gameOver();
 
 console.log(livesDisplay.innerHTML);
+console.log(lives);
