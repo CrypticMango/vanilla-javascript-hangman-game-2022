@@ -740,7 +740,7 @@ livesDisplay.innerHTML = livesWord + lives;
 //game over screen
 
 function gameOver() {
-	if (document.getElementById("five-lives").innerHTML === 0) {
+	if (lives === 0) {
 		alert("Game Over! You ran out of lives.");
 		location.reload();
 	}
