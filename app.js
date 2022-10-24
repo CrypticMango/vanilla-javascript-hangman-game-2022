@@ -71,7 +71,7 @@ function newWord() {
 insertPhrase();
 
 //array of letters
-let letters = [
+let alphabet = [
 	"a",
 	"b",
 	"c",
@@ -101,11 +101,11 @@ let letters = [
 ];
 
 
+
 //functions to check to see if a letter is in a phrase
 
 //letter a
 function checkLetterA() {
-	
 	if (result.includes("a")) {
 		document.getElementById('a').style.backgroundColor = '#00FF00';
 		return true;
@@ -737,7 +737,16 @@ function checkLivesZ() {
 
 livesDisplay.innerHTML = livesWord + lives;
 
-//gameover screen
+//game over screen
+
+function gameOver() {
+	if (document.getElementById("five-lives").innerHTML === 0) {
+		alert("Game Over! You ran out of lives.");
+		location.reload();
+	}
+}
+
+gameOver();
 
 let gameOverButton = document.getElementById("game-over");
 gameOverButton.addEventListener("click", gameOverScreen);
@@ -745,16 +754,6 @@ gameOverButton.addEventListener("click", gameOverScreen);
 function gameOverScreen() {
 	location.href = "gameover.html";
 }
-
-function gameOver() {
-	if (lives === 0) {
-		alert("Game Over! You ran out of lives.");
-		location.reload();
-	}
-}
-
-
-gameOver();
 
 console.log(livesDisplay.innerHTML);
 console.log(lives);
